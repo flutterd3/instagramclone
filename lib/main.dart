@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:instagramclone/responsive/mobileScreenLayout.dart';
+import 'package:instagramclone/responsive/responsive_layout.dart';
+import 'package:instagramclone/responsive/webScreenLayout.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,8 +17,11 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Aavash Intagram ',
       theme: ThemeData.dark(),
-      home: Scaffold(
-        body: Text("HI"),
+      home: const Scaffold(
+        body: ResPonsiveLayout(
+          mobileScreenLayout: MobileScreenLayout(),
+          webScreenLayout: WebScreenLayout(),
+        ),
       ),
     );
   }
